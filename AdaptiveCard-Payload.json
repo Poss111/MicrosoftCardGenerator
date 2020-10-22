@@ -1,0 +1,24 @@
+{
+  "title": "MarketPoint Regression",
+  "description": "Results of regression for MarketPoint",
+  "creator": {
+    "name": "Declarative Pipeline",
+    "profileImage": "https://image.shutterstock.com/image-vector/dangerous-black-white-godzillalike-monster-600w-59013217.jpg"
+  },
+  "createdUtc": "2017-02-14T06:08:39Z",
+  "viewUrl": "https://adaptivecards.io",
+  "properties": [
+    {
+      "key": "Environment",
+      "value": "Test"
+    },
+    {
+      "key": "Browser",
+      "value": "Chrome"
+    },
+    {
+      "key": "Total time",
+      "value": "30m 20s"
+    }
+  ]
+}

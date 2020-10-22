@@ -1,0 +1,180 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "Image",
+              "style": "Person",
+              "url": "${creator.profileImage}",
+              "size": "Small"
+            }
+          ],
+          "width": "auto"
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "text": "${creator.name}",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "None",
+              "text": "Created {{DATE(${createdUtc},SHORT)}}",
+              "isSubtle": true,
+              "wrap": true
+            }
+          ],
+          "width": "stretch"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "${description}",
+      "wrap": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "$data": "${properties}",
+          "title": "${key}:",
+          "value": "${value}"
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Scenario",
+              "wrap": true,
+              "size": "Medium",
+              "weight": "Bolder"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Failed",
+              "wrap": true,
+              "size": "Medium",
+              "weight": "Bolder",
+              "color": "Attention"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Passed",
+              "wrap": true,
+              "size": "Medium",
+              "weight": "Bolder",
+              "color": "Good"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Time",
+              "wrap": true,
+              "size": "Medium",
+              "weight": "Bolder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Feature 1",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "0",
+              "wrap": true,
+              "fontType": "Default"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "1",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "2m 6s",
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "View Cucumber Report",
+      "url": "${viewUrl}"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3"
+}
